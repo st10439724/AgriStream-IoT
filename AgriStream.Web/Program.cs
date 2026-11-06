@@ -52,7 +52,7 @@ builder.Services.Configure<FormOptions>(options =>
 });
 
 
-builder.Services.AddApplicationInsightsTelemetry();
+
 
 
 
