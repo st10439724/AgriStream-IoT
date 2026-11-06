@@ -31,6 +31,7 @@
                     <ul class="navbar-nav">
                         @if (User.Identity?.IsAuthenticated == true)
                         {
+                            <li class="nav-item"><a class="nav-link text-dark" asp-controller="Drone" asp-action="Upload">Drone images</a></li>
                             <li class="nav-item d-flex align-items-center me-2">
                                 <span class="navbar-text">
                                     @User.Identity.Name

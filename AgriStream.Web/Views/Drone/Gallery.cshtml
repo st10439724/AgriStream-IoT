@@ -1,0 +1,20 @@
+﻿@model List<AgriStream.Web.Services.BlobInfo>
+@{
+    ViewData["Title"] = "Drone uploads";
+}
+<h2>Drone uploads</h2>
+
+<table class="table">
+    <thead><tr><th>Name</th><th>Size (KB)</th><th>Uploaded (UTC)</th></tr></thead>
+    <tbody>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td>@b.Name</td>
+                <td>@((b.Size ?? 0) / 1024)</td>
+                <td>@b.Modified?.UtcDateTime.ToString("yyyy-MM-dd HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Upload">Upload another</a>
